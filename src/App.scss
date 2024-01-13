@@ -1,0 +1,16 @@
+@import "constants";
+body {
+  background-color: $dark__primary;
+}
+.App {
+  padding: 25px 34px;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 834px) {
+  .App {
+    padding: 16px 24px;
+  }
+}

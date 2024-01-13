@@ -1,0 +1,17 @@
+@import "src/constants";
+.dashboard {
+    background-color: $light__primary;
+    border-radius: 17px;
+    color: white;
+    padding: 24px;
+}
+.divider {
+    width: 100%;
+    border-bottom: 1px solid #313E62;
+}
+.company {
+    padding: 0;
+    margin: 0;
+}
+.users {
+}
