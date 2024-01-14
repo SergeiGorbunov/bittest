@@ -1,5 +1,7 @@
 import styles from "./Dashboard.module.scss";
+// @ts-expect-error
 import Search from "../../components/Search";
+// @ts-expect-error
 import Table from "../../components/Table";
 const Dashboard = () => {
   return (

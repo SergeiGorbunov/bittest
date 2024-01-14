@@ -1,5 +1,5 @@
 import styles from "./Table.module.scss";
-const Table = () => {
+const Table: React.FC = () => {
   return (
     <table className={styles.table}>
       <thead className={styles.table__header}>
