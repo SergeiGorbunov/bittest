@@ -1,0 +1,12 @@
+@import "src/constants";
+.table {
+  margin-top: 24px;
+  width: 100%;
+  background-color: $dark__primary;
+}
+.table__header {
+  align-items: center;
+  th {
+    padding: 14px 66px;
+  }
+}
