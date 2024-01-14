@@ -1,7 +1,5 @@
-// @ts-expect-error
-import Header from "./components/Header";
-// @ts-expect-error
-import Dashboard from "./widjets/Dashboard";
+import Header from "./components/Header/Header.tsx";
+import Dashboard from "./widjets/Dashboard/Dashboard.tsx";
 import "./App.scss";
 
 const App = () => {
