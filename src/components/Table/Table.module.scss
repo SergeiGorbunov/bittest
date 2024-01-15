@@ -1,12 +1,32 @@
-@import "src/constants";
+@import "../../constants";
 .table {
-  margin-top: 24px;
   width: 100%;
-  background-color: $dark__primary;
-}
-.table__header {
-  align-items: center;
-  th {
-    padding: 14px 66px;
+  color: white;
+  font-size: 14px;
+  border-spacing: 0 32px;
+
+  thead {
+    tr {
+      background-color: $dark__primary;
+
+      th {
+        padding: 12px 0;
+
+        &:first-child {
+          border-radius: 8px 0 0 8px;
+        }
+        &:last-child {
+          border-radius: 0 8px 8px 0;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        text-align: center;
+      }
+    }
   }
 }
