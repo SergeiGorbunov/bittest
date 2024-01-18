@@ -1,5 +1,5 @@
 import styles from "./Search.module.scss";
-import search, { setSearch } from "../../utils/store/search";
+import { setSearch } from "../../utils/store/search";
 import { useDispatch, useSelector } from "react-redux";
 const Search: React.FC = () => {
   const searchValue = useSelector((search) => search.search.value);

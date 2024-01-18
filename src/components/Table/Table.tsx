@@ -2,7 +2,6 @@ import styles from "./Table.module.scss";
 import { useGetPageWithUsersQuery } from "../../utils/store/usersApi";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import search from "../../utils/store/search";
 const Table = () => {
   const searchValue = useSelector((search) => search.search.search);
   const [currentPage, setCurrentPage] = useState(1);
