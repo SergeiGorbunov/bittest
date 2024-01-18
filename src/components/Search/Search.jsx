@@ -1,8 +1,7 @@
 import styles from "./Search.module.scss";
 import { setSearch } from "../../utils/store/search";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@reduxjs/toolkit/query";
-const Search: React.FC = () => {
+const Search = () => {
   const searchValue = useSelector((store) => store.search.search);
   const dispatch = useDispatch();
   return (

@@ -15,7 +15,7 @@ const Table = () => {
     }
   );
 
-  const handlePageChange = (page: number) => {
+  const handlePageChange = (page) => {
     setCurrentPage(page);
   };
   const pages = [];

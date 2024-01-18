@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header.tsx";
-import Dashboard from "./widjets/Dashboard/Dashboard.tsx";
+import Dashboard from "./widjets/Dashboard/Dashboard.jsx";
 import "./App.scss";
 
 const App = () => {
