@@ -11,9 +11,10 @@ export const userApi = createApi({
       }),
     }),
     getPageWithUsers: builder.query({
-      query: ({ ...props }) => ({
-        url: `user/list/?page=${props.page}?search=${props.search}`,
+      query: ({ page = 1, search = "" }: { page: number; search: string }) => ({
+        url: `user/list/`,
         method: "GET",
+        params: { page, search },
       }),
     }),
   }),

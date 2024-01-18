@@ -1,9 +1,9 @@
 import styles from "./Search.module.scss";
-import { useState } from "react";
-
+import search, { setSearch } from "../../utils/store/search";
+import { useDispatch, useSelector } from "react-redux";
 const Search: React.FC = () => {
-  const [searchValue, setSearchValue] = useState("");
-
+  const searchValue = useSelector((search) => search.search.value);
+  const dispatch = useDispatch();
   return (
     <div className={styles.search}>
       <div className={styles.search__icon}></div>
@@ -11,7 +11,7 @@ const Search: React.FC = () => {
         placeholder="Поиск"
         className={styles.search__input}
         type="search"
-        onChange={(e) => setSearchValue(e.target.value)}
+        onChange={(e) => dispatch(setSearch(e.target.value))} //dispatch
         value={searchValue}
       />
     </div>
