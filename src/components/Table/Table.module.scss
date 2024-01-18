@@ -4,6 +4,7 @@
   color: white;
   font-size: 14px;
   border-spacing: 0 32px;
+  table-layout: fixed;
 
   thead {
     tr {
@@ -29,4 +30,32 @@
       }
     }
   }
+}
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination__button {
+  width: 38px;
+  height: 34px;
+  background-color: rgba($color: #000000, $alpha: 0);
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 8px;
+}
+.pagination__button:hover {
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  cursor: pointer;
+}
+.pagination__button__active {
+  width: 38px;
+  height: 34px;
+  background-color: #1c64f2;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 8px;
 }

@@ -1,6 +1,7 @@
 import styles from "./Dashboard.module.scss";
 import Search from "../../components/Search/Search.tsx";
 import CustomizedTables from "../../components/Table/Table.tsx";
+import Pagination from "../../components/Pagination/Pagination.tsx";
 const Dashboard = () => {
   return (
     <>

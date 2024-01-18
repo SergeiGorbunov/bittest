@@ -1,16 +1,19 @@
 @import "src/constants";
 .dashboard {
-    background-color: $light__primary;
-    border-radius: 17px;
-    color: white;
-    padding: 24px 24px;
+  background-color: $light__primary;
+  border-radius: 17px;
+  color: white;
+  padding: 24px 24px;
 }
 .divider {
-    width: 100%;
-    border-bottom: 1px solid #313E62;
-
+  width: 100%;
+  border-bottom: 1px solid #313e62;
 }
 .company {
-    padding: 0 0 24px 0;
-    margin: 0;
+  padding: 0 0 24px 0;
+  margin: 0;
+  font-weight: 600;
+}
+.users {
+  font-weight: 600;
 }
