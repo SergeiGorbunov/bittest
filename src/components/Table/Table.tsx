@@ -3,7 +3,7 @@ import { useGetPageWithUsersQuery } from "../../utils/store/usersApi";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 const Table = () => {
-  const searchValue = useSelector((search) => search.search.search);
+  const searchValue = useSelector((search: string) => search.search.search);
   const [currentPage, setCurrentPage] = useState(1);
   const { data, isLoading, error } = useGetPageWithUsersQuery(
     {
