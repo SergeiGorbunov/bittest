@@ -59,3 +59,13 @@
   padding: 6px;
   border-radius: 8px;
 }
+@media screen and (max-width: 834px) {
+  .table {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
