@@ -1,14 +1,25 @@
 import styles from "./Table.module.scss";
 import { useGetPageWithUsersQuery } from "../../utils/store/usersApi";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setDrawer, setUserId } from "../../utils/store/drawer";
+
 const Table = () => {
   const searchValue = useSelector((store) => store.search.search);
+  const [sort, setSort] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const dispatch = useDispatch();
+  let tempOrder = "";
+  if (sort) {
+    tempOrder = "tokens:asc";
+  } else {
+    tempOrder = "tokens:desc";
+  }
   const { data, isLoading, error } = useGetPageWithUsersQuery(
     {
       page: currentPage,
       search: searchValue,
+      orderBy: tempOrder,
     },
     {
       refetchOnMountOrArgChange: true,
@@ -39,24 +50,41 @@ const Table = () => {
               <th>Имя</th>
               <th>Роль</th>
               <th>Подписка</th>
-              <th>Токены</th>
+              <th
+                className={styles.tokens}
+                onClick={() => {
+                  setSort(!sort);
+                }}
+              >
+                Токены
+              </th>
               <th>Действия</th>
             </tr>
           </thead>
           <tbody>
             {data &&
               data.data.map((user) => (
-                <tr key={user.id}>
-                  <td>{user.email}</td>
-                  <td>{user.name}</td>
-                  <td>{user.role}</td>
-                  <td>{user.subscription.plan.type}</td>
-                  <td>{user.subscription.tokens}</td>
-                  <td>
-                    <button>Редактировать</button>
-                    <button>Удалить</button>
-                  </td>
-                </tr>
+                <>
+                  <tr key={user.id}>
+                    <td> {user.email}</td>
+                    <td
+                      className={styles.name}
+                      onClick={() => {
+                        dispatch(setDrawer(true));
+                        dispatch(setUserId(user.id));
+                      }}
+                    >
+                      {user.name}
+                    </td>
+                    <td>{user.role}</td>
+                    <td>{user.subscription.plan.type}</td>
+                    <td>{user.subscription.tokens}</td>
+                    <td>
+                      <button className={styles.edit__button}></button>
+                      <button className={styles.delete__button}></button>
+                    </td>
+                  </tr>
+                </>
               ))}
           </tbody>
         </table>
@@ -80,5 +108,4 @@ const Table = () => {
       </>
     );
 };
-
 export default Table;

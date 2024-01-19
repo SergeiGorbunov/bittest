@@ -11,10 +11,18 @@ export const userApi = createApi({
       }),
     }),
     getPageWithUsers: builder.query({
-      query: ({ page = 1, search = "" }: { page: number; search: string }) => ({
+      query: ({
+        page = 1,
+        search = "",
+        orderBy = "tokens:asc",
+      }: {
+        page: number;
+        search: string;
+        orderBy: string;
+      }) => ({
         url: `user/list/`,
         method: "GET",
-        params: { page, search },
+        params: { page, search, orderBy },
       }),
     }),
   }),
