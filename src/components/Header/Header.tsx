@@ -7,7 +7,7 @@ const Header: React.FC = () => {
       <div className={styles.profile}>
         <img
           className={styles.profile__avatar}
-          src="../../assets/Avatar.png"
+          src='../../assets/images/default-avatar.png'
           alt="avatar"
         />
         <div className={styles.profile__text}>
