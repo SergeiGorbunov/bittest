@@ -3,8 +3,9 @@
   width: 100%;
   color: white;
   font-size: 14px;
-  border-spacing: 0 32px;
+  border-spacing: 0 0;
   table-layout: fixed;
+  margin-top: 24px;
 
   thead {
     tr {
@@ -29,7 +30,12 @@
         text-align: center;
         border-bottom: 1px solid #222b44;
         padding-bottom: 23px;
+        padding-top: 23px;
+
       }
+    }
+    tr:hover {
+      background-color: rgba($color: #000000, $alpha: 0.2);
     }
   }
 }
@@ -70,6 +76,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 24px;
 }
 .pagination__button {
   width: 38px;

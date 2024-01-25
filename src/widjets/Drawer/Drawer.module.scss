@@ -33,3 +33,20 @@
     }
   }
 }
+.drawer__start {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.close {
+  background-image: url(../../assets/Icon/Close.svg);
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+}
+.close:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
+}

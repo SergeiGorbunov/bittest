@@ -1,6 +1,6 @@
 import styles from "./Dashboard.module.scss";
 import Search from "../../components/Search/Search.jsx";
-import CustomizedTables from "../../components/Table/Table.jsx";
+import Table from "../../components/Table/Table.jsx";
 const Dashboard = () => {
   return (
     <>
@@ -9,7 +9,7 @@ const Dashboard = () => {
         <div className={styles.divider}></div>
         <h3 className={styles.users}>Пользователи</h3>
         <Search />
-        <CustomizedTables />
+        <Table />
       </section>
     </>
   );

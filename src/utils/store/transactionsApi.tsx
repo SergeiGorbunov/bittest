@@ -8,6 +8,7 @@ export const transactionsApi = createApi({
       query: (id) => ({
         url: `/user/${id}/transactions`,
         method: "GET",
+        params: id,
       }),
     }),
   }),

@@ -1,0 +1,23 @@
+.write__off {
+    color: red;
+}
+.replenish {
+    color: green;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 0;
+    table-layout: fixed;
+    margin-top: 24px;
+    margin: 24px auto 0 auto;
+    text-align: center;
+    th {
+        padding: 12px 0;
+        border-bottom: 1px solid #313e62;
+    }
+    td {
+        padding: 12px 0;
+        border-bottom: 1px solid #313e62;
+    }
+}

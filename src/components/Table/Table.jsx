@@ -2,7 +2,7 @@ import styles from "./Table.module.scss";
 import { useGetPageWithUsersQuery } from "../../utils/store/usersApi";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setDrawer, setUserId } from "../../utils/store/drawer";
+import { setDrawer, setUserId, setUserMail } from "../../utils/store/drawer";
 
 const Table = () => {
   const searchValue = useSelector((store) => store.search.search);
@@ -33,7 +33,6 @@ const Table = () => {
   for (let i = 1; i <= data?.pages; i++) {
     pages.push(i);
   }
-  console.log(pages);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -72,6 +71,7 @@ const Table = () => {
                       onClick={() => {
                         dispatch(setDrawer(true));
                         dispatch(setUserId(user.id));
+                        dispatch(setUserMail(user.email));
                       }}
                     >
                       {user.name}
