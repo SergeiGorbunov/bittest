@@ -18,7 +18,7 @@ const Drawer = () => {
         setIsOpen(!isOpen);
       }}
       className={
-        isOpen ? styles.drawer__container : styles["drawer__container-hidden"]
+        isOpen ? styles.drawer__container : styles["drawer__container-hidden"] + " " + styles.drawer__container
       }
     >
       <div onClick={(e) => e.stopPropagation()} className={styles.drawer}>
