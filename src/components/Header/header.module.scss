@@ -49,6 +49,10 @@
 }
 .profile__avatar {
   border-radius: 50%;
+  background-image: url('src/assets/images/default-avatar.png');
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 32px;
   height: 32px;
   margin-right: 12px;
